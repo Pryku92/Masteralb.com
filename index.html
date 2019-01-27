@@ -7,23 +7,200 @@
   <title>Masteralb</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 <body>
   <header>
-    <img src="assets/top-logo-black.png" alt="masteralb logo" class="top-logo">
+    <img src="assets/top-logo.png" alt="masteralb logo" class="top-logo">
   </header>
 
-  <section class="register">
-    <h2>Register Form</h2>
-    <form action="">
-      <input type="text" name="" id="" placeholder="Username">
-      <input type="password" name="" id="" placeholder="Password">
-      <input type="password" name="" id="" placeholder="Confirm Password">
-      <input type="email" name="" id="" placeholder="Email">
-      <input type="dropdown" name="" id="" placeholder="Your Location">
-      <input type="checkbox" name="" id="">
-      <button class="btn-green btn-block">Sign Up</button>
-    </form>
-  </section>
+  <main>
+
+<!-- REGISTER SECTION -->
+
+    <section>
+      <h2>Register Form</h2>
+
+      <form action="" method="">
+        <div class="input-box">
+          <label for="username" class="hidden">username</label>
+          <div class="icon-box">
+            <i class="fas fa-user"></i>
+          </div>
+          <input type="text" name="user_username" id="username" placeholder="Username">
+        </div>
+          
+        <div class="input-box">
+          <label for="password" class="hidden">password</label>
+          <div class="icon-box">
+            <i class="fas fa-lock"></i>
+          </div>
+          <input type="password" name="user_password" id="password" placeholder="Password">
+        </div>
+          
+        <div class="input-box">
+          <label for="confirm" class="hidden">confirm password</label>
+          <div class="icon-box">
+            <i class="fas fa-lock"></i>
+          </div>
+          <input type="password" name="user_confirm" id="confirm" placeholder="Confirm Password">
+        </div>
+          
+        <div class="input-box">
+          <label for="email" class="hidden">email adress</label>
+          <div class="icon-box">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <input type="email" name="user_email" id="email" placeholder="Email">
+        </div>
+          
+        <div class="input-box">
+          <label for="location" class="hidden">your location</label>
+          <div class="icon-box">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <select name="user_location" id="location">
+            <option value="" disabled selected>Your Location</option>
+            <option value="Mercury">Mercury</option>
+            <option value="Venus">Venus</option>
+            <option value="Earth">Earth</option>
+            <option value="Mars">Mars</option>
+            <option value="Jupiter">Jupiter</option>
+            <option value="Saturn">Saturn</option>
+            <option value="Uranus">Uranus</option>
+            <option value="Neptune">Neptune</option>
+          </select>
+        </div>
+        
+        <div class="checkbox-box">
+          <label for="terms" class="hidden">terms of use checkbox</label>
+          <input type="checkbox" name="user_terms" id="terms">
+          <span class="checkbox-label">I have read and accept the terms of use.</span>
+        </div>
+        
+        <button class="btn-green btn-block">Sign Up</button>
+      </form>
+    </section>
+
+<!-- SEND EMAIL SECTION -->
+
+    <section>
+      <h2>Send Email</h2>
+
+      <form action="" method="">
+        <div class="input-box">
+          <label for="username" class="hidden">username</label>
+          <div class="icon-box">
+            <i class="fas fa-user"></i>
+          </div>
+          <input type="text" name="user_name" id="username" placeholder="Your Name">
+        </div>
+        
+        <div class="input-box">
+          <label for="email" class="hidden">email adress</label>
+          <div class="icon-box">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <input type="email" name="user_email" id="email" placeholder="Your Email">
+        </div>
+        
+        <textarea name="" id="" cols="30" rows="10" placeholder="Type your message..."></textarea>
+      </form>
+    </section>
+  
+<!-- SIGN IN SECTION -->
+  
+    <section>
+      <h2>Sign In Form</h2>
+
+      <form action="" method="">
+        <div class="input-box">
+          <label for="username" class="hidden">username</label>
+          <div class="icon-box">
+            <i class="fas fa-user"></i>
+          </div>
+          <input type="text" name="user_username" id="username" placeholder="Username">
+        </div>
+        
+        <div class="input-box">
+          <label for="password" class="hidden">password</label>
+          <div class="icon-box">
+            <i class="fas fa-lock"></i>
+          </div>
+          <input type="password" name="user_password" id="password" placeholder="Password">
+        </div>
+
+        <input type="checkbox" name="" id="">
+
+        <button>Sign in</button>
+      </form>
+    </section>
+
+<!-- RECOVER SECTION -->
+
+    <section>
+      <h2>Recover Form</h2>
+
+      <form action="" method="">
+        <div class="input-box">
+          <label for="email" class="hidden">email adress</label>
+          <div class="icon-box">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <input type="email" name="user_email" id="email" placeholder="Enter Your Email">
+        </div>
+
+        <div class="input-box">
+          <label for="phone" class="hidden">email adress</label>
+          <div class="icon-box">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <input type="tel" name="user_phone" id="phone" placeholder="Enter Your Phone number">
+        </div>
+
+        <button>Send</button>
+        <button>Done</button>
+      </form>
+    </section>
+
+<!-- SUBSCRIBE SECTION -->
+
+    <section>
+      <h2>Subscribe Form</h2>
+
+      <form action="" method="">
+        <div class="input-box">
+          <label for="email" class="hidden">email adress</label>
+          <div class="icon-box">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <input type="email" name="user_email" id="email" placeholder="Enter Your Email">
+        </div>
+
+        <button>Subscribe</button>
+        <button>No, Thanks</button>
+      </form>
+    </section>
+
+  <!-- FOOTER -->
+
+    <footer>
+      <img src="assets/bottom-logo.png" alt="" class="bottom-logo">
+    </footer>
+  </main>
 </body>
 </html>
+
+
+
+<!-- 
+<i class="fas fa-user"></i>
+
+<i class="fas fa-mobile-alt"></i>
+
+<i class="fas fa-lock"></i>
+
+<i class="fas fa-envelope"></i>
+
+<i class="fas fa-map-marker-alt"></i> 
+-->

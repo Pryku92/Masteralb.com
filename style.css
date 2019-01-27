@@ -6,19 +6,95 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-html {
+body {
   height: 100%;
-  background: url(assets/background.jpg);
+  background: url(assets/background.jpg) no-repeat center;
   background-size: cover;
   font-family: 'Titillium Web', sans-serif;
 }
 
 .top-logo {
-  width: 35%;
-  margin: 3rem auto;
   display: block;
-  opacity: 0.3;
+  margin: 5vh auto;
+  width: 23%;
+  opacity: 0.6;
+}
+
+.bottom-logo {
+  display: block;
+  margin: 5rem auto;
+  opacity: 0.7;
+}
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 1300px;
+}
+
+section {
+  margin: 0 auto;
+  width: 30%;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+form {
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 2px;
+  color: #afafaf;
+  font-size: 1.3rem;
+}
+
+.input-box {
+  border: 1px solid #c6c6c6;
+  display: flex;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  padding-left: 0;
+}
+
+.icon-box {
+  display: inline-block;
+  text-align: center;
+  border-right: 2px solid #c6c6c6;
+  flex: 1;
+}
+
+.input-box input {
+  border: none;
+  background: inherit;
+  color: inherit;
+  flex: 7;
+  padding-left: 3%;
+  font-size: 1rem;
+}
+
+select {
+  border: none;
+  background: inherit;
+  color: inherit;
+  flex: 7;
+  padding-left: 3%;
+  font-size: 1rem;
+}
+
+
+
+.hidden {
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  overflow: hidden;
+  position: absolute;
+  right: 20000px;
 }

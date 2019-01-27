@@ -18,48 +18,50 @@ body {
 .top-logo {
   display: block;
   margin: 5vh auto;
-  width: 23%;
   opacity: 0.6;
 }
 
 .bottom-logo {
   display: block;
-  margin: 5rem auto;
+  margin: 0 auto;
   opacity: 0.7;
 }
 
 main {
   display: flex;
   flex-flow: column wrap;
-  max-height: 1300px;
+  max-height: 1600px;
 }
 
 section {
   margin: 0 auto;
-  width: 30%;
+  width: 500px;
+  margin-bottom: 5rem;
 }
 
 h2 {
   font-size: 2rem;
   color: #fff;
   text-align: center;
-  margin: 2rem 0;
+  margin-bottom: 1rem;
 }
 
 form {
   background: #f4f4f4;
+  background-clip: padding-box;
   padding: 1.5rem;
-  border-radius: 2px;
+  border: 20px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
   color: #afafaf;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .input-box {
   border: 1px solid #c6c6c6;
   display: flex;
-  border-radius: 4px;
+  border-radius: 5px;
   margin-bottom: 1.5rem;
-  padding: 0.5rem;
+  padding: 0.4rem;
   padding-left: 0;
 }
 
@@ -67,14 +69,14 @@ form {
   display: inline-block;
   text-align: center;
   border-right: 2px solid #c6c6c6;
-  flex: 1;
+  flex: 1 1.1rem;
 }
 
 .input-box input {
   border: none;
   background: inherit;
   color: inherit;
-  flex: 7;
+  flex: 14;
   padding-left: 3%;
   font-size: 1rem;
 }
@@ -83,12 +85,40 @@ select {
   border: none;
   background: inherit;
   color: inherit;
-  flex: 7;
+  flex: 14;
   padding-left: 3%;
   font-size: 1rem;
 }
 
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  resize: none;
+  border: 1px solid #c6c6c6;
+  border-radius: 5px;
+  font-family: inherit;
+  background: inherit;
+  color: inherit;
+  padding: 0.4rem;
+}
 
+button {
+  color: #fff;
+  font-family: inherit;
+  font-size: 1.5rem;
+  background: #7ec31f;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #7ec31f, #a2d73f);
+  background: linear-gradient(to top, #7ec31f, #a2d73f);
+  border: 1px solid #3a9a00;
+  border-radius: 5px;
+  width: 11rem;
+  padding: 0.2rem 0;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
 
 .hidden {
   display: inline-block;

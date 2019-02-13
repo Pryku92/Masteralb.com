@@ -112,6 +112,10 @@ textarea {
   margin-bottom: 1.5rem;
 }
 
+textarea:focus {
+  box-shadow: -1px -1px 12px #7ec31f inset;
+}
+
 /* CUSTOM CHECKBOXES */
 
 .checkbox-wrapper {

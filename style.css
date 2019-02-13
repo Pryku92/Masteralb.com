@@ -197,6 +197,11 @@ button:active {
   background: linear-gradient(to top, #acd183, #c5e1a6);
 }
 
+.button-inactive:hover {
+  box-shadow: none;
+  cursor: default;
+}
+
 @media (min-width: 700px) {
   header, footer {
     padding: none;

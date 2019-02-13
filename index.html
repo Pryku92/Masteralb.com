@@ -23,41 +23,41 @@
     <fieldset>
       <legend class="hidden">register form</legend>
 
-      <div class="input-box">
+      <div class="input-wrapper">
         <label for="username" class="hidden">username</label>
-        <div class="icon-box">
+        <div class="icon-wrapper">
           <i class="fas fa-user"></i>
         </div>
         <input type="text" name="user_username" id="username" placeholder="Username">
       </div>
           
-      <div class="input-box">
+      <div class="input-wrapper">
         <label for="password" class="hidden">password</label>
-        <div class="icon-box">
+        <div class="icon-wrapper">
           <i class="fas fa-lock"></i>
         </div>
         <input type="password" name="user_password" id="password" placeholder="Password">
       </div>
           
-      <div class="input-box">
+      <div class="input-wrapper">
         <label for="confirm" class="hidden">confirm password</label>
-        <div class="icon-box">
+        <div class="icon-wrapper">
           <i class="fas fa-lock"></i>
         </div>
         <input type="password" name="user_confirm" id="confirm" placeholder="Confirm Password">
       </div>
           
-      <div class="input-box">
+      <div class="input-wrapper">
         <label for="email" class="hidden">email adress</label>
-        <div class="icon-box">
+        <div class="icon-wrapper">
           <i class="fas fa-envelope"></i>
         </div>
         <input type="email" name="user_email" id="email" placeholder="Email">
       </div>
           
-      <div class="input-box">
+      <div class="input-wrapper">
         <label for="location" class="hidden">your location</label>
-        <div class="icon-box">
+        <div class="icon-wrapper">
           <i class="fas fa-map-marker-alt"></i>
         </div>
         <select name="user_location" id="location">
@@ -74,12 +74,11 @@
       </div>
         
       <div class="checkbox-wrapper">
-        <label for="terms" class="hidden">terms of use checkbox</label>
         <input type="checkbox" name="user_terms" id="terms">
-        <span class="checkbox-label">I have read and accept the terms of use.</span>
+        <label for="terms">I have read and accept the terms of use.</label>
       </div>
         
-      <button class="btn-block">Sign Up</button>
+      <button class="button-block">Sign Up</button>
     </fieldset>
   </form>
 
@@ -90,17 +89,17 @@
     <fieldset>
       <legend class="hidden">send email</legend>
 
-      <div class="input-box">
+      <div class="input-wrapper">
         <label for="username" class="hidden">username</label>
-        <div class="icon-box">
+        <div class="icon-wrapper">
           <i class="fas fa-user"></i>
         </div>
         <input type="text" name="user_name" id="username" placeholder="Your Name">
       </div>
         
-      <div class="input-box">
+      <div class="input-wrapper">
         <label for="email" class="hidden">email adress</label>
-        <div class="icon-box">
+        <div class="icon-wrapper">
           <i class="fas fa-envelope"></i>
         </div>
         <input type="email" name="user_email" id="email" placeholder="Your Email">
@@ -109,11 +108,11 @@
       <textarea name="" id="" cols="30" rows="10" placeholder="Type your message..."></textarea>
 
       <div class="checkbox-wrapper">
-        <input type="checkbox">
-        <span>Send a copy to my Email</span>
+        <input type="checkbox" name="user_mail_copy" id="copy">
+        <label for="copy">Send a copy to my Email</label>
       </div>
 
-      <button class="btn-block">Send Email</button>
+      <button class="button-block">Send Email</button>
     </fieldset>
   </form>
   
@@ -124,26 +123,26 @@
     <fieldset>
       <legend class="hidden">sign in</legend>
 
-      <div class="input-box">
+      <div class="input-wrapper">
         <label for="username" class="hidden">username</label>
-        <div class="icon-box">
+        <div class="icon-wrapper">
           <i class="fas fa-user"></i>
         </div>
         <input type="text" name="user_username" id="username" placeholder="Username">
       </div>
         
-      <div class="input-box">
+      <div class="input-wrapper">
         <label for="password" class="hidden">password</label>
-        <div class="icon-box">
+        <div class="icon-wrapper">
           <i class="fas fa-lock"></i>
         </div>
         <input type="password" name="user_password" id="password" placeholder="Password">
       </div>
 
-      <div class="checkbox-wrapper flex-wrapper">
-        <div>
-          <input type="checkbox" name="" id="">
-          <span>Remember me</span>
+      <div class="button-wrapper">
+        <div class="checkbox-wrapper">
+          <input type="checkbox" name="user_remember" id="remember">
+          <label for="remember">Remember me</label>
         </div>
         <button>Sign in</button>
       </div>
@@ -155,25 +154,25 @@
     <h2>Recover Form</h2>
     <fieldset>
       <legend class="hidden"></legend>
-      <div class="input-box">
+      <div class="input-wrapper">
         <label for="email" class="hidden">email adress</label>
-        <div class="icon-box">
+        <div class="icon-wrapper">
           <i class="fas fa-envelope"></i>
         </div>
         <input type="email" name="user_email" id="email" placeholder="Enter Your Email">
       </div>
 
-      <div class="input-box">
+      <div class="input-wrapper">
         <label for="phone" class="hidden">email adress</label>
-        <div class="icon-box">
+        <div class="icon-wrapper">
           <i class="fas fa-mobile-alt"></i>
         </div>
         <input type="tel" name="user_phone" id="phone" placeholder="Enter Your Phone number">
       </div>
 
-      <div class="flex-wrapper">
+      <div class="button-wrapper">
         <button>Send</button>
-        <button>Done</button>
+        <button class="button-inactive">Done</button>
       </div>
     </fieldset>
   </form>
@@ -184,17 +183,17 @@
     <fieldset>
       <legend class="hidden">subscribe</legend>
 
-      <div class="input-box">
+      <div class="input-wrapper">
         <label for="email" class="hidden">email adress</label>
-        <div class="icon-box">
+        <div class="icon-wrapper">
           <i class="fas fa-envelope"></i>
         </div>
         <input type="email" name="user_email" id="email" placeholder="Enter Your Email">
       </div>
 
-      <div class="flex-wrapper">
+      <div class="button-wrapper">
         <button>Subscribe</button>
-        <button>No, Thanks</button>
+        <button class="button-red">No, Thanks</button>
       </div>
     </fieldset>
   </form>
@@ -207,17 +206,3 @@
   </main>
 </body>
 </html>
-
-
-
-<!-- 
-<i class="fas fa-user"></i>
-
-<i class="fas fa-mobile-alt"></i>
-
-<i class="fas fa-lock"></i>
-
-<i class="fas fa-envelope"></i>
-
-<i class="fas fa-map-marker-alt"></i> 
--->

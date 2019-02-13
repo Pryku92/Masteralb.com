@@ -3,70 +3,94 @@
   padding: 0;
 }
 
+*:focus {
+  outline: none;
+}
+
 body {
   background: url(assets/background.jpg) no-repeat center;
   background-size: cover;
   font-family: 'Titillium Web', sans-serif;
 }
 
+header {
+  padding: 0 1rem;
+}
+
 .top-logo {
   display: block;
+  width: 100%;
   margin: 2.5rem auto;
   opacity: 0.7;
-}
-
-.bottom-logo {
-  display: block;
-  margin: 0 auto;
-  opacity: 0.4;
-}
-
-main {
-  display: flex;
-  flex-flow: column wrap;
-  max-height: 1600px;
 }
 
 form {
   margin: 0 auto;
   margin-bottom: 5rem;
-  width: 500px;
+}
+
+fieldset {
+  background: #f4f4f4;
+  background-clip: padding-box;
+  border: none;
+  border-radius: 5px;
+  color: #afafaf;
+  font-size: 1.2rem;
+  padding: 1rem 1rem 0 1rem;
 }
 
 h2 {
   font-size: 2rem;
   color: #fff;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 2px #000;
 }
 
-fieldset {
-  background: #f4f4f4;
-  background-clip: padding-box;
-  padding: 1.5rem;
-  border: 20px solid rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  color: #afafaf;
-  font-size: 1.2rem;
+footer {
+  padding: 0 2rem 2rem 2rem;
 }
 
-.input-box {
+.bottom-logo {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  opacity: 0.4;
+}
+
+.hidden {
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  overflow: hidden;
+  position: absolute;
+  right: 20000px;
+}
+
+/* INPUT FIELDS/ TEXTAREA */
+
+.input-wrapper {
   display: flex;
   border: 1px solid #c6c6c6;
   border-radius: 5px;
   margin-bottom: 1.5rem;
   padding: 0.4rem;
   padding-left: 0;
+  transition: all 300ms;
 }
 
-.icon-box {
+.input-wrapper:focus-within {
+  box-shadow: -1px -1px 12px #7ec31f inset;
+}
+
+.icon-wrapper {
   display: inline-block;
   border-right: 2px solid #c6c6c6;
   flex: 5%;
   text-align: center;
 }
 
-.input-box input, select {
+.input-wrapper input, select {
   background: inherit;
   border: none;
   padding-left: 3%;
@@ -88,44 +112,144 @@ textarea {
   margin-bottom: 1.5rem;
 }
 
+/* CUSTOM CHECKBOXES */
+
 .checkbox-wrapper {
-  padding: 0 0.4rem;
+  margin-bottom: 1.5rem;
 }
 
-.checkbox-wrapper input {
-  margin-right: 0.4rem;
+.checkbox-wrapper * {
+  cursor: pointer;
 }
+
+.checkbox-wrapper input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #c6c6c6;
+  border-radius: 3px;
+  vertical-align: -3px;
+  padding: 3px;
+  margin: 0 0.4rem;
+}
+
+.checkbox-wrapper input[type="checkbox"]::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #7ec31f;
+  border-radius: 2px;
+  opacity: 0;
+  transition: all 300ms;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked::before {
+  opacity: 1;
+}
+
+/* BUTTONS */
 
 button {
-  color: #fff;
   font-family: inherit;
+  display: block;
+  width: 100%;
+  color: #fff;
   font-size: 1.5rem;
-  background: #7ec31f;  /* fallback for old browsers */
+  background: #7ec31f;
   background: -webkit-linear-gradient(to top, #7ec31f, #a2d73f);
   background: linear-gradient(to top, #7ec31f, #a2d73f);
   border: 1px solid #3a9a00;
   border-radius: 5px;
-  width: 11rem;
   padding: 0.2rem 0;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px #000;
+  position: relative;
+  transition: all 300ms;
+  cursor: pointer;
 }
 
-.btn-block {
-  display: block;
-  width: 100%;
-  margin-top: 1.5rem;
+button:hover {
+  box-shadow: 2px 2px 12px #7ec31f;
 }
 
-.flex-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+button:active {
+  top: 3px;
+  left: 3px;
 }
 
-.hidden {
-  display: inline-block;
-  width: 2px;
-  height: 2px;
-  overflow: hidden;
-  position: absolute;
-  right: 20000px;
+.button-red {
+  border: 1px solid #a2202a;
+  background: #f03747;
+  background: -webkit-linear-gradient(to top, #f03747, #f55e6f);
+  background: linear-gradient(to top, #f03747, #f55e6f);
+}
+
+.button-red:hover {
+  box-shadow: 2px 2px 12px #a2202a;
+}
+
+.button-inactive {
+  border: 1px solid #8fca6c;
+  background: #acd183;
+  background: -webkit-linear-gradient(to top, #acd183, #c5e1a6);
+  background: linear-gradient(to top, #acd183, #c5e1a6);
+}
+
+@media (min-width: 700px) {
+  header, footer {
+    padding: none;
+  }
+
+  .top-logo, .bottom-logo {
+    width: initial;
+  }
+
+  form {
+    width: 90%;
+  }
+  
+  fieldset {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    border: 20px solid rgba(0, 0, 0, 0.3);
+  }
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  form {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 1600px;
+  }
+
+  form {
+    width: 500px;
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  button {
+    display: inline-block;
+    width: 11rem;
+  }
+
+  .button-block {
+    display: block;
+    width: 100%;
+  }
 }
